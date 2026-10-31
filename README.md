@@ -48,12 +48,31 @@ Private Android browser. Mozilla GeckoView is the engine. There is no custom bac
 
 ## Install
 
-1. Open the [releases page](https://github.com/web-coder-lab/not-bypass/releases).
+1. Open the [releases page](https://github.com/web-coder-lab/not-bypass/releases/tag/v1.0.0).
 2. Download `NOTBYPASS-v1.0.0.apk`.
 3. On the phone, allow install from the browser if Android asks.
 4. Open the app. Grant notification and download access only when a feature needs them.
 
 Source archive for the same tag is attached as `NOTBYPASS-v1.0.0-source.zip`.
+
+APK SHA-256:
+
+```
+5dbf4ba35d5e09c856ce8b0fa4b986385a4b535ca2f86cbf92d6e5e6cc51f958
+```
+
+Certificate SHA-256:
+
+```
+aea3a1714e059a47ebd34ee22c06d5f9f25ccfb08e98592eb5578a91ecb59289
+```
+
+Direct links:
+
+- APK: https://github.com/web-coder-lab/not-bypass/releases/download/v1.0.0/NOTBYPASS-v1.0.0.apk
+- SHA-256: https://github.com/web-coder-lab/not-bypass/releases/download/v1.0.0/NOTBYPASS-v1.0.0.apk.sha256
+- Source: https://github.com/web-coder-lab/not-bypass/releases/download/v1.0.0/NOTBYPASS-v1.0.0-source.zip
+
 
 ## Signing
 
