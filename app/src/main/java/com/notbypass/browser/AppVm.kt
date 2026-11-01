@@ -538,11 +538,11 @@ class AppVm(app: Application) : AndroidViewModel(app), EngineHost {
 
     private val netCb = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {
-            main.post { setOnline(true) }
+            main.post { updateOnline(true) }
         }
 
         override fun onLost(network: Network) {
-            main.post { setOnline(false) }
+            main.post { updateOnline(false) }
         }
 
         override fun onCapabilitiesChanged(network: Network, caps: NetworkCapabilities) {
@@ -561,7 +561,7 @@ class AppVm(app: Application) : AndroidViewModel(app), EngineHost {
         runCatching { cm?.registerDefaultNetworkCallback(netCb) }
     }
 
-    private fun setOnline(on: Boolean) {
+    private fun updateOnline(on: Boolean) {
         if (on == online) return
         online = on
         if (on) {
