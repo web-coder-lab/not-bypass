@@ -3,71 +3,146 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>NOT BYPASS</title>
+<title>NOT BYPASS – Apps</title>
+<meta name="description" content="NOT BYPASS is a private Android browser. Mozilla GeckoView engine. No account. No analytics. Data stays on the phone." />
+<meta name="theme-color" content="#0b0b10" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="screen">
-  <header>
-    <div class="mark">NB</div>
-    <div>
-      <h1>NOT BYPASS</h1>
-      <p>Private browser for Android</p>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">NB</span>
+      <span>NOT BYPASS</span>
     </div>
+    <a class="src" href="https://github.com/web-coder-lab/not-bypass">Source</a>
   </header>
 
-  <section class="card">
-    <span class="badge">v1.0.0 · arm64</span>
-    <h2>No backend. No trackers. Your phone only.</h2>
-    <p>Mozilla GeckoView engine. Tabs, private session, bookmarks, downloads, and 22 settings screens. Data stays in app-private JSON files.</p>
-    <a class="btn" id="dl" href="https://github.com/web-coder-lab/not-bypass/releases/latest/download/NOTBYPASS-v1.0.0.apk">Download APK</a>
-    <a class="ghost" href="https://github.com/web-coder-lab/not-bypass">Source on GitHub</a>
+  <section class="head">
+    <div class="icon">NB</div>
+    <div>
+      <h1>NOT BYPASS</h1>
+      <p class="dev">Syed Muhammad Hussain Shah</p>
+      <p class="meta">Private browser · Android</p>
+    </div>
   </section>
 
-  <section class="grid">
-    <article>
-      <b>Engine</b>
-      <span>GeckoView 140</span>
-    </article>
-    <article>
-      <b>Android</b>
-      <span>8.0 and newer</span>
-    </article>
-    <article>
-      <b>Storage</b>
-      <span>Local JSON only</span>
-    </article>
-    <article>
-      <b>Backup</b>
-      <span>Disabled</span>
-    </article>
+  <section class="stats">
+    <div><b>1.1.0</b><span>Version</span></div>
+    <div><b>8.0+</b><span>Android</span></div>
+    <div><b>arm64</b><span>APK</span></div>
+    <div><b>Local</b><span>Storage</span></div>
   </section>
 
-  <section class="card">
-    <h3>Install</h3>
-    <ol>
-      <li>Download the APK on your phone.</li>
-      <li>Allow install from this browser if Android asks.</li>
-      <li>Open NOT BYPASS. Grant notification and download access when needed.</li>
-    </ol>
+  <a class="install" id="dl" href="https://github.com/web-coder-lab/not-bypass/releases/download/v1.1.0/NOTBYPASS-v1.1.0.apk">Install</a>
+  <p class="note" id="size">Signed APK · SHA-256 on the release page</p>
+
+  <section class="block">
+    <h2>About this app</h2>
+    <p>NOT BYPASS is a private Android browser built around Mozilla GeckoView. It opens pages, keeps tabs, bookmarks, and settings on the phone, and does not use a custom server, account, or analytics kit.</p>
+    <p>It was made so a browser does not have to ask who you are. Close the app and the choice stays on the device.</p>
+    <div class="chips">
+      <span>No account</span>
+      <span>No analytics</span>
+      <span>No ads</span>
+      <span>No custom backend</span>
+    </div>
   </section>
 
-  <section class="card">
-    <h3>What is real</h3>
+  <section class="block">
+    <h2>What's new</h2>
+    <div class="news">
+      <b>1.1.0</b>
+      <span>Fuller browser shell, settings pages, downloads, notifications, and private session handling.</span>
+    </div>
+    <div class="news">
+      <b>1.0.0</b>
+      <span>First signed release. GeckoView engine, tabs, bookmarks, local JSON storage.</span>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Features</h2>
+    <div class="feats">
+      <article><b>Tabs</b><span>Multiple tabs and a separate private session.</span></article>
+      <article><b>Bookmarks</b><span>Saved in app-private JSON on this phone.</span></article>
+      <article><b>Downloads</b><span>Android DownloadManager. Files go to the system download folder.</span></article>
+      <article><b>Search</b><span>Default engines plus custom search engines.</span></article>
+      <article><b>Privacy controls</b><span>Tracking protection, cookies, HTTPS-only, site permissions.</span></article>
+      <article><b>Appearance</b><span>Theme, toolbar position, text size, homepage.</span></article>
+      <article><b>Network tools</b><span>Connection status and diagnostics on the device.</span></article>
+      <article><b>Backup file</b><span>Local export and import of settings. No cloud.</span></article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Settings</h2>
+    <p>Twenty-four settings pages cover general, search, privacy, network, proxy limits, downloads, tabs, permissions, appearance, accessibility, advanced, storage, passwords, media, notifications, homepage, data, updates, performance, developer tools, backup, browser experience, network dashboard, and about.</p>
+  </section>
+
+  <section class="block">
+    <h2>Data safety</h2>
+    <div class="safe">
+      <div><b>Data collected</b><span>None by the app. No account, no analytics, no ads.</span></div>
+      <div><b>Data stored</b><span>Bookmarks, settings, and session choices stay in app-private files.</span></div>
+      <div><b>History</b><span>Browsing history is not stored by the app.</span></div>
+      <div><b>Backup</b><span>Android backup is disabled. You can export a local file yourself.</span></div>
+      <div><b>Delete</b><span>Uninstall removes the app’s private files. Flash storage can still leave old blocks. This is not forensic erasure.</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Permissions</h2>
     <ul>
-      <li>Real GeckoView sessions, not a fake WebView shell</li>
-      <li>Normal tabs and a separate private session</li>
-      <li>Bookmarks and settings saved on the device</li>
-      <li>Android DownloadManager and native notifications</li>
-      <li>No custom server, no analytics, no account</li>
+      <li>Internet and network state, so pages can load</li>
+      <li>Notifications, for download and network alerts you turn on</li>
+      <li>Camera, microphone, and location only if a site asks and you allow it</li>
     </ul>
   </section>
 
+  <section class="block">
+    <h2>App info</h2>
+    <div class="info">
+      <div><span>Package</span><b>com.notbypass.browser</b></div>
+      <div><span>Version</span><b>1.1.0 (2)</b></div>
+      <div><span>Engine</span><b>GeckoView 140</b></div>
+      <div><span>Min Android</span><b>8.0 (API 26)</b></div>
+      <div><span>ABI</span><b>arm64-v8a</b></div>
+      <div><span>APK</span><b id="mb">About 179 MB</b></div>
+      <div><span>SHA-256</span><b class="mono">bf21b5ad3e6554f953e41205f8d41aa7b93908323fce57e8ff180fe76d9148d1</b></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>What this is not</h2>
+    <ul>
+      <li>Not a Tor browser and not safer than Tor</li>
+      <li>Not a claim that websites cannot see you</li>
+      <li>Not a hidden network. This page is a normal GitHub Pages site</li>
+      <li>Not a Google Play listing. Install is a direct APK</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>The other app</h2>
+    <p>NEXGUARD is the notification health app. It stays on the phone and records the notification events you choose.</p>
+    <a class="link" href="https://web-coder-lab.github.io/">Open NEXGUARD</a>
+  </section>
+
   <footer>
-    <a href="https://github.com/web-coder-lab/not-bypass/releases">Releases</a>
-    <a href="https://github.com/web-coder-lab/not-bypass/blob/main/README.md">Readme</a>
+    <a href="https://github.com/web-coder-lab/not-bypass/releases/tag/v1.1.0">Release</a>
+    <a href="https://github.com/web-coder-lab/not-bypass/releases/download/v1.1.0/NOTBYPASS-v1.1.0-source.zip">Source zip</a>
+    <a href="https://github.com/web-coder-lab/not-bypass">GitHub</a>
     <span>Syed Muhammad Hussain Shah</span>
   </footer>
+</div>
+
+<div class="bar">
+  <div>
+    <b>NOT BYPASS</b>
+    <span>1.1.0 · private browser</span>
+  </div>
+  <a id="dl2" href="https://github.com/web-coder-lab/not-bypass/releases/download/v1.1.0/NOTBYPASS-v1.1.0.apk">Install</a>
 </div>
 <script src="app.js"></script>
 </body>
