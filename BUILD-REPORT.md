@@ -1,64 +1,12 @@
-# Build report
+# Build report v1.1.0
 
-Date: 2026-10-31
+Status: source rewritten and statically reviewed. **Not compiled and not run** in the authoring environment (no Android SDK, no network). First build on CI or your machine may need small fixes.
 
-## Build status
+Check first if the build fails (GeckoView 140 API names written from memory):
+1. `NavigationDelegate.onLocationChange` signature (4 parameters with `hasUserGesture`)
+2. `GeckoRuntimeSettings.setAllowInsecureConnections`, `HTTPS_ONLY`, `ALLOW_ALL`
+3. `StorageController.ClearFlags.PERMISSIONS`, `ALL_CACHES`, `COOKIES`, `ALL`
+4. `setAutomaticFontSizeAdjustment`, `setFontSizeFactor`
 
-Source compiles. Debug APK was not produced in this environment.
-
-`compileDebugKotlin` completed. Packaging failed later when the Gradle process was killed.
-
-Cause: the machine has about 1.9 GB RAM and swap cannot be enabled. GeckoView packaging needs more memory. The daemon exited with `DaemonDisappearedException` during `mergeDebugGlobalSynthetics` / asset packaging.
-
-## How to build the APK
-
-On a machine with at least 8 GB RAM:
-
-```bash
-export ANDROID_HOME=/path/to/android-sdk
-./gradlew assembleDebug test
-```
-
-Expected APK:
-
-`app/build/outputs/apk/debug/app-debug.apk`
-
-## Engine
-
-| Item | Value |
-|---|---|
-| Requested latest stable | GeckoView `159.0.20261022150525` |
-| Used | GeckoView `140.0.20250707120347` arm64-v8a |
-| Reason | 159 requires Android API 37 and AGP 9.1. This environment only has API 36. |
-| ABI | arm64-v8a only |
-
-## Implemented
-
-- Real GeckoView runtime and sessions
-- URL/search, back, forward, reload, stop
-- Tabs and private sessions
-- Local JSON bookmarks and settings
-- 22 settings categories as real screens
-- Browser Experience presets (UI only; engine stays GeckoView)
-- Android DownloadManager
-- Notification channels and in-app notice list
-- Network connectivity check
-- Tracking protection set to GeckoView Standard
-- History off by default
-- Backup disabled
-
-## Not complete
-
-- Installable APK from this environment
-- Physical-device tests
-- Web Push
-- Full proxy application
-- QR scanner
-- Voice search
-- Reader mode
-- Gallery-specific MediaStore routing
-- Invented tracker counts (intentionally not added)
-
-## Tests
-
-Unit tests are in `app/src/test`. They were not finished in this environment because packaging killed the build before the test task completed. They can be run with `./gradlew test` on a larger machine.
+Engine: GeckoView 140.0.20250707120347 (arm64-v8a). Minimum Android 8.0 (API 26).
+APK: `app/build/outputs/apk/debug/app-debug.apk` after `./gradlew assembleDebug`.

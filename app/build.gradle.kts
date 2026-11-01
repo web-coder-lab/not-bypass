@@ -12,8 +12,8 @@ android {
         applicationId = "com.notbypass.browser"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "GECKO_VERSION", "\"140.0.20250707120347\"")
         ndk {
@@ -75,5 +75,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("org.mozilla.geckoview:geckoview-arm64-v8a:140.0.20250707120347")
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.json:json:20240303")
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
